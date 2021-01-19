@@ -9,9 +9,7 @@ function validaNome() {
     let txtNome = document.querySelector('#txtNome')
     if (nome.value.length < 3) {
         txtNome.innerHTML = 'Nome Inválido'
-        txtNome.classList = 'alert alert-danger'
-        txtNome.innerHTML = '<button type="button" class="close" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>'
-        
+        txtNome.classList = 'alert alert-danger'        
             
     }else{
         txtNome.innerHTML = 'Nome Válido'
@@ -36,9 +34,9 @@ function validaEmail() {
 function validaAssunto() {
     let txtAssunto = document.querySelector('#txtAssunto')
 
-    if (assunto.value.length >= 100) {
+    if (assunto.value.length > 100) {
         txtAssunto.innerHTML = 'Testo é muito grande, digite no máximo 100 caracteres'
-        txtAssunto.style.color = 'red'
+        txtAssunto.classList = 'alert alert-danger'
         txtAssunto.style.display = 'block'
     }else{
         txtAssunto.style.display = 'none'
